@@ -15,12 +15,9 @@ export class TracklistRepository {
     musicData.each((index, element) => {
       const text = $(element).text();
       if (index > 1) {
-        if (dataIndex % 5 === 4 && !text.includes('Google Play')) {
-          dataIndex += 1;
-        }
-
-        const songIndex = Math.floor(dataIndex / 5);
-        switch (dataIndex % 5) {
+        const songIndex = Math.floor(dataIndex / 4);
+        // console.log(text, dataIndex);
+        switch (dataIndex % 4) {
           case 0: {
             musicList.push({});
             musicList[songIndex].name = text.trim();
