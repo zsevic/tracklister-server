@@ -28,7 +28,7 @@ export class TracklistRepository {
             const link = html('a').attr('href');
 
             musicList[songIndex].name = text.trim();
-            musicList[songIndex].link = link || '';
+            musicList[songIndex].link = link ? `https://www.youtube.com${link}` : '';
 
             break;
           }
