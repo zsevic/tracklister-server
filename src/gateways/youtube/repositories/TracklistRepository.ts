@@ -3,6 +3,8 @@ import axios from 'axios';
 import cheerio from 'cheerio';
 import { Track } from 'domain/entities/Track';
 
+const albumTypes = ['Албум', 'Album'];
+
 export class TracklistRepository {
   async getTracklist(url: string): Promise<Track[]> {
     const { data } = await axios(url);
@@ -37,7 +39,7 @@ export class TracklistRepository {
           }
 
           case 2: {
-            if (type.trim() === 'Албум') {
+            if (albumTypes.includes(type.trim())) {
               musicList[songIndex].album = text.trim();
             } else {
               musicList[songIndex].album = '';
