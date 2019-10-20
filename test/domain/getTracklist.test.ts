@@ -7,7 +7,7 @@ const mockGetTracklist = tracklistRepository.getTracklist as jest.Mock;
 
 describe('Get tracklist', (): void => {
   it('should get tracklist for given url', async (): Promise<void> => {
-    const tracks: Track[] = [{ name: 'track', album: 'album', artist: 'artist' }];
+    const tracks: Track[] = [{ name: 'track', link: '', album: 'album', artist: 'artist' }];
     mockGetTracklist.mockResolvedValue(tracks);
     const url = 'https://www.youtube.com/watch?v=fVlVZTHmkaw';
 

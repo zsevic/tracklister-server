@@ -14,23 +14,39 @@ export class TracklistRepository {
 
     musicData.each((index, element) => {
       const text = $(element).text();
+      const type = $(element).prev().text();
+
       if (index > 1) {
         const songIndex = Math.floor(dataIndex / 4);
-        // console.log(text, dataIndex);
+
         switch (dataIndex % 4) {
           case 0: {
             musicList.push({});
+            const html = cheerio.load($(element).html());
+            const link = html('a').attr('href');
+
             musicList[songIndex].name = text.trim();
+            musicList[songIndex].link = link || '';
+
             break;
           }
+
           case 1: {
             musicList[songIndex].artist = text.trim();
             break;
           }
+
           case 2: {
-            musicList[songIndex].album = text.trim();
+            if (type.trim() === 'Албум') {
+              musicList[songIndex].album = text.trim();
+            } else {
+              musicList[songIndex].album = '';
+              dataIndex += 1;
+            }
+
             break;
           }
+
           default: break;
         }
         dataIndex += 1;
