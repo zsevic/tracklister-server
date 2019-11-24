@@ -6,7 +6,6 @@
 ```bash
 git clone https://github.com/zsevic/tracklister-server
 cd tracklister-server
-cp .env.sample .env # change values after copying
 npm i
 npm run dev
 ```
