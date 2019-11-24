@@ -4,7 +4,7 @@ import routes from 'api/routes';
 
 const server = new hapi.Server({
   port: process.env.PORT || 8080,
-  host: 'localhost',
+  host: '0.0.0.0',
   routes: {
     cors: true,
   },
