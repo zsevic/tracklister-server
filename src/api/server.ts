@@ -5,6 +5,9 @@ import routes from 'api/routes';
 const server = new hapi.Server({
   port: process.env.PORT || 8080,
   host: 'localhost',
+  routes: {
+    cors: true,
+  },
 });
 
 export const init = async (): Promise<void> => {
