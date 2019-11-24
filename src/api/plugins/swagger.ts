@@ -5,10 +5,10 @@ import Pack from 'root/package.json';
 
 const swaggerOptions = {
   info: {
-    title: 'tracklister-server API Documentation',
+    title: `${Pack.name} API Documentation`,
     version: Pack.version,
   },
-  documentationPath: '/docs',
+  documentationPath: '/api-docs',
 };
 
 export default [{
