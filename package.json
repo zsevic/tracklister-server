@@ -7,7 +7,7 @@
     "build": "tsc",
     "dev": "NODE_PATH=./src nodemon --exec ts-node src/app.ts",
     "lint": "eslint src --ext ts",
-    "lint-fix": "eslint src --ext ts --fix",
+    "lint:fix": "eslint src --ext ts --fix",
     "start": "NODE_PATH=./dist/src node dist/src/app.js",
     "test": "jest -c test/jest.config.js"
   },
@@ -21,7 +21,6 @@
     "@hapi/vision": "^5.5.4",
     "axios": "^0.19.0",
     "cheerio": "^1.0.0-rc.3",
-    "hapi-modern-cors": "^1.1.0",
     "hapi-swagger": "^10.2.0",
     "tsconfig-paths": "^3.9.0"
   },

@@ -1,5 +1,5 @@
 import * as hapi from '@hapi/hapi';
-import { Track } from 'domain/entities/Track';
+import { Track } from 'domain/entities';
 import { getTracklist } from 'domain/use_cases/getTracklist';
 
 export function getTracklistHandler(request: hapi.Request, h: hapi.ResponseToolkit):
