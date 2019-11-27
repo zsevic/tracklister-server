@@ -27,7 +27,7 @@ npm test
 
 ```
 GET /
-GET /tracklist?url=url
+GET /tracklist?url=<YOUTUBE URL>
 ```
 
 ### :package: Technologies used
