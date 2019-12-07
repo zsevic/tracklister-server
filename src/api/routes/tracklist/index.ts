@@ -1,4 +1,3 @@
-import * as hapi from '@hapi/hapi';
 import * as controller from './controller';
 import { tracklistQuery } from './validation';
 
@@ -17,5 +16,5 @@ export default [{
 }, {
   method: 'GET',
   path: '/',
-  handler: (request: hapi.Request, h: hapi.ResponseToolkit): string => 'hello world',
+  handler: (): string => 'hello world',
 }];
