@@ -1,5 +1,5 @@
 # tracklister-server
-> Backend for [Tracklister](https://sevic.me/tracklister)
+> Backend for [Tracklister](https://github.com/zsevic/tracklister)
 
 ### :wrench: Setup
 
