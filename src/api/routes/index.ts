@@ -1,3 +1,4 @@
+import { ServerRoute } from '@hapi/hapi';
 import tracklistRoutes from './tracklist';
 
-export default [...tracklistRoutes];
+export default [...tracklistRoutes] as ServerRoute[];
